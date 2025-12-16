@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    width: 90%;
+    max-width: 600px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 22px;
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    animation: slideUp 1s ease;
+    margin: 0 auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mensaje-romantico {
+    font-size: 14px;
+    color: #2c4635;
+    opacity: 0;
+    animation: suave 2.4s ease forwards;
+}
+
+@keyframes suave {
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 26px;
+    color: #24402d;
+    margin: 10px 0;
+}
+
+p {
+    color: #2e4633;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+input,
+button {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #bdd8c2;
+    outline: none;
+    font-size: 15px;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+input:focus {
+    transform: scale(1.03);
+    border-color: #7ccf9c;
+    box-shadow: 0 0 10px rgba(124, 207, 156, 0.5);
+}
+
+input:active {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7ad38c, #4caf50);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+    transform: scale(1.07);
+}
+
+button.loading {
+    cursor: default;
+}
+
+button.loading .btn-text {
+    color: transparent;
+}
+
+button .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    transition: width 0.3s ease;
+}
+
+#mensaje-final {
+    margin-top: 18px;
+    font-weight: bold;
+    color: #1b4d2b;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#mensaje-final.mostrar {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#sorpresa {
+    margin-top: 10px;
+    color: #2d372c;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#sorpresa.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 98%;
+        max-width: none;
+        padding: 16px;
+        border-radius: 14px;
+        margin: 1%;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

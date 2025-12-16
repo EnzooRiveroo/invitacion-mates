@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invitación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <p class="mensaje-romantico">Me gustaría compartir un momento lindo con vos… 💚✨</p>
+
+        <h2>¿Tomamos unos mates? 🧉💚</h2>
+
+        <p>Elegí cuándo te viene bien vernos en<br><b>Parque Metropolitano - Maipú</b></p>
+
+        <input type="date" id="fecha" min="2025-11-15" max="2026-12-31" aria-label="Elegir fecha">
+        <input type="time" id="hora" min="08:00" max="23:00" aria-label="Elegir hora">
+
+        <button id="confirm-btn" onclick="confirmar()">
+            <span class="btn-text">Confirmar</span>
+            <div class="progress"></div>
+        </button>
+
+        <p id="mensaje-final"></p>
+        <p id="sorpresa"></p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
